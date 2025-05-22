@@ -38,13 +38,6 @@
         document.head.appendChild(meta);
       }
       meta.setAttribute('content', isDark ? darkColor : lightColor);
-
-      if (window.matchMedia('(display-mode: standalone)').matches || /iPhone|iPad|iPod/.test(navigator.userAgent)) {
-        if (typeof updateThemeColor.lastIsDark !== "undefined" && updateThemeColor.lastIsDark !== isDark) {
-          window.location.reload();
-        }
-        updateThemeColor.lastIsDark = isDark;
-      }
     }
     updateThemeColor();
     const observer = new MutationObserver(updateThemeColor);
