@@ -1,0 +1,12 @@
+{
+    "name": "Nom",
+    "amount": "Montant",
+    "calculate": "Calculer",
+    "add": "Ajouter",
+    "name-required": "Le nom est requis",
+    "amount-required": "Le montant est requis",
+    "results": {
+        "title": "Résultats",
+        "copy": "Copier le lien"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Name",
+    "amount": "Amount",
+    "calculate": "Calculate",
+    "add": "Add",
+    "name-required": "Name is required",
+    "amount-required": "Amount is required",
+    "results": {
+        "title": "Results",
+        "copy": "Copy link"
+    }
+}
