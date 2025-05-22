@@ -18,12 +18,31 @@
   <link href="src/index.css" rel="stylesheet" />
   <link rel="canonical" href="https://kidoikoi.ca/" />
   <meta name="description" content="Kidoikoi - Un site pour équillibrer les dépenses entre amis!" />
-  <meta name="theme-color" content="#00A86B" />
+  <meta name="theme-color" content="#F9F9F9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1c0e" media="(prefers-color-scheme: dark)">
+
 </head>
 
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
+  <script>
+    const lightColor = "#F9F9F9";
+    const darkColor = "#0f1c0e";
+    function updateThemeColor() {
+      const isDark = document.documentElement.classList.contains('dark');
+      let meta = document.querySelector('meta[name="theme-color"]');
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.name = "theme-color";
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', isDark ? darkColor : lightColor);
+    }
+    updateThemeColor();
+    const observer = new MutationObserver(updateThemeColor);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+  </script>
 </body>
 
 </html>

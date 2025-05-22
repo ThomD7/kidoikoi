@@ -6,7 +6,7 @@ import React from "react";
 export default function Home() {
     return (
         <Layout>
-            <div className="w-full h-screen flex flex-col items-center mt-10">
+            <div className="w-full flex flex-col items-center mt-10">
                 <Add />
                 <List />
             </div>
