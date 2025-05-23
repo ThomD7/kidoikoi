@@ -97,6 +97,7 @@ export default function Results() {
             <div className="w-full h-screen flex flex-col items-center mt-10">
                 <div className="w-80">
                     <Button
+                        label={t("results.copy")}
                         onClick={handleCopy}
                     >
                         {t("results.copy")}

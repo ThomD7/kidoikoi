@@ -82,7 +82,10 @@ export default function Add() {
                         />
                         {errors.amount && <div className="text-red-500 text-sm mt-1">{errors.amount}</div>}
                     </div>
-                    <Button onClick={add}>
+                    <Button
+                        label={t('add')}
+                        onClick={add}
+                    >
                         {t('add')}
                     </Button>
                 </form>
@@ -90,6 +93,7 @@ export default function Add() {
             </div>
             <div className="w-1/2 flex items-center">
                 <Button
+                    label={t('calculate')}
                     onClick={calculate}
                     disabled={peoples.length < 3}
                     className={`${peoples.length < 3 ? 'bg-jade/10 hover:cursor-not-allowed' : ''

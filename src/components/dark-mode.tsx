@@ -2,6 +2,7 @@ import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import Button from "./ui/button";
 import React from "react";
+import { t } from "i18next";
 
 export default function DarkMode() {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -42,6 +43,7 @@ export default function DarkMode() {
     return (
         <div className="w-13">
             <Button
+                label={t("dark-mode")}
                 onClick={toggleDarkMode}
                 className="items-center"
             >

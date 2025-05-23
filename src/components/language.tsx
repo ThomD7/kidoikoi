@@ -15,6 +15,7 @@ const LanguageSwitcher = () => {
     return (
         <div className='w-13 h-13'>
             <Button
+                label={currentLanguage === 'en' ? 'FR' : 'EN'}
                 onClick={switchLanguage}
                 className='h-13'
             >
