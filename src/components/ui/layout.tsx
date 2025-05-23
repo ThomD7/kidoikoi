@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="flex flex-row justify-around items-center sm:w-1/2 w-full">
                 <DarkMode />
                 <button className='hover:cursor-pointer' onClick={() => window.location.href = '/'}>
-                    <img width="70px" height="70px" src="./kidoikoi.png" loading="eager" alt="Kidoikoi" title="Kidoikoi" className="w-32" />
+                    <img width="70px" height="70px" src="./kidoikoi.webp" loading="lazy" alt="Kidoikoi" title="Kidoikoi" className="w-32" />
                 </button>
                 <LanguageSwitcher />
             </div>
